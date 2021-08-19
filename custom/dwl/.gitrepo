@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:atlasflamer/dwl.git
+	branch = main
+	commit = 1183a319a02cf89aa7311124fca7f15332c80547
+	parent = 2bc7e952a790cb22068f6ca057d14367906dab1e
+	method = merge
+	cmdver = 0.4.3
