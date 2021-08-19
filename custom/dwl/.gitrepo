@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@github.com:atlasflamer/dwl.git
 	branch = main
-	commit = 1183a319a02cf89aa7311124fca7f15332c80547
-	parent = 2bc7e952a790cb22068f6ca057d14367906dab1e
+	commit = 0bc9fd49781c8e65e70262fc571b2ad487c1d000
+	parent = 2118d2735e992f2bce9fa2d96faa5295f788f6b7
 	method = merge
 	cmdver = 0.4.3
