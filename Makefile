@@ -2,6 +2,8 @@ include config.mk
 
 CFLAGS += -I. -DWLR_USE_UNSTABLE -std=c99
 
+DESTDIR=/
+
 WAYLAND_PROTOCOLS=$(shell pkg-config --variable=pkgdatadir wayland-protocols)
 WAYLAND_SCANNER=$(shell pkg-config --variable=wayland_scanner wayland-scanner)
 
@@ -15,10 +17,10 @@ clean:
 	rm -f dwl *.o *-protocol.h *-protocol.c
 
 install: dwl
-	install -D dwl $(PREFIX)/bin/dwl
+	install -D dwl ${DESTDIR}/$(PREFIX)/bin/dwl
 
 uninstall:
-	rm -f $(PREFIX)/bin/dwl
+	rm -f ${DESTDIR}/$(PREFIX)/bin/dwl
 
 .PHONY: all clean install uninstall
 
