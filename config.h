@@ -62,7 +62,7 @@ static const int natural_scrolling = 1;
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[] = { "st", NULL };
+static const char *termcmd[] = { "kitty", NULL };
 static const char *menucmd[] = { "bemenu-run", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 
@@ -78,8 +78,8 @@ static const Key keys[] = {
 	{ MODKEY,                    XKB_KEY_d,          incnmaster,     {.i = -1} },
 	{ MODKEY,                    XKB_KEY_h,          setmfact,       {.f = -0.05} },
 	{ MODKEY,                    XKB_KEY_l,          setmfact,       {.f = +0.05} },
-	{ MODKEY,                    XKB_KEY_Return,     zoom,           {0} },
-	{ MODKEY,                    XKB_KEY_Tab,        view,           {0} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,     zoom,           {0} },
+	{ MODKEY,					 XKB_KEY_Tab,        view,           {0} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_C,          killclient,     {0} },
 	{ MODKEY,                    XKB_KEY_t,          setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                    XKB_KEY_f,          setlayout,      {.v = &layouts[1]} },
